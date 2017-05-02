@@ -1,0 +1,34 @@
+UI
+
+AL -> intrfete
+
+AL IMPL -> clase 
+
+BL -> interfete		BL- bussiness layer
+
+BL IMPL -> clase
+
+DAL
+
+
+ex:
+	UI:
+		@Inject
+		private RequirementService service;
+
+	AL:
+		private RequirementService service;
+		@Reference
+		public void setRequirementService (RequirementService r) {
+			service = r;
+		}
+
+	BL: 
+		RequirementService	//interfata
+
+	BL IMPL:
+		@Component
+		RequirementServiceImpl
+
+
+dmo - domain model object
